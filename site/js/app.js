@@ -113,6 +113,22 @@ function update_state() {
 }
 
 var base_layers = function() {
+
+    var osmde_layer = new ol.layer.Tile({
+        source: new ol.source.XYZ({
+            url: 'https://{a-d}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
+            minZoom: 1,
+            maxZoom: 19,
+            attributions: 'Base map &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors.' +
+                          'Tiles <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>.',
+            wrapX: false
+        }),
+        type: 'base',
+        title: "OSM German style",
+        shortname: 'OSde',
+        opacity: state.base_layer_opacity
+    })
+
     var osm_layer = new ol.layer.Tile({
         source: new ol.source.OSM({
             attributions: 'Base map &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors.' +
@@ -140,7 +156,7 @@ var base_layers = function() {
         opacity: state.base_layer_opacity
     })
 
-    return [toner_layer, osm_layer];
+    return [toner_layer, osm_layer, osmde_layer];
 }();
 
 var style_circle_casing = new ol.style.Circle({fill: new ol.style.Fill({color: 'rgba(255,255,255,1)'}), radius: 5});
