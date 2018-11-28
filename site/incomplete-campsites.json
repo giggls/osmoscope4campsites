@@ -1,0 +1,11 @@
+{
+    "id": "incomplete_campsites",
+    "name": "Incomplete campsites",
+    "doc": {
+        "description": "Campsites which contain no further tagging than name",
+        "why_problem": "",
+        "how_to_fix": " Add more detailed tagging."
+    },
+    "updates": "daily",
+    "vector_tile_url": "http://camping.openstreetmap.de/osmoscope/campsite_tiles/{z}/{x}/{y}.pbf"
+}
