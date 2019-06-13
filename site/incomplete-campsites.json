@@ -7,5 +7,5 @@
         "how_to_fix": " Add more detailed tagging."
     },
     "updates": "daily",
-    "vector_tile_url": "http://camping.openstreetmap.de/osmoscope/campsite_tiles/{z}/{x}/{y}.pbf"
+    "vector_tile_url": "https://camping.openstreetmap.de/osmoscope/campsite_tiles/{z}/{x}/{y}.pbf"
 }

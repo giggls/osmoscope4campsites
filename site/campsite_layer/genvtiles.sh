@@ -10,9 +10,6 @@
 # See https://github.com/joto/osmoscope/blob/master/doc/creating-layers.md
 # for instructions
 
-PSQL_HOST=tile.openstreetmap.de
-PSQL_USER=rouser
-
 TMPDIR=/tmp
 
 TIPPECANOE=/home/sven/tippecanoe/tippecanoe
@@ -21,7 +18,7 @@ SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 
 cd $SCRIPTDIR
 
-psql -h $PSQL_HOST -U $PSQL_USER -t -X -f incomplete-campsites.sql osm >$TMPDIR/incomplete-campsites.json
+psql -t -X -f incomplete-campsites.sql poi >$TMPDIR/incomplete-campsites.json
 
 rm -rf ../campsite_tiles.tmp
 
