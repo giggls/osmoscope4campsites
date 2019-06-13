@@ -691,7 +691,7 @@ document.addEventListener('DOMContentLoaded', function() {
         child.addEventListener('click', switch_tab, false);
     });
 
-    load_data_source('http://camping.openstreetmap.de/osmoscope/incomplete-campsites.json');
+    load_data_source('https://camping.openstreetmap.de/osmoscope/incomplete-campsites.json');
 
     document.getElementById('add_source').addEventListener('change', function(event) {
         load_data_source(this.value);
